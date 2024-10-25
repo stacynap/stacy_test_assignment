@@ -21,19 +21,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '22'
-      - name: Wait for the setup
-        run: sleep 10
-
+      
       # Step 3: Install dependencies
       - name: Install NPM
         run: npm install
-      - name: Wait for the setup
-        run: sleep 10
       - name: Install Jest & Supertest
         run: npm install jest supertest 
-      - name: Wait for the setup
-        run: sleep 10
-
+      
       # Step 4: Run tests 
       - name: Run tests
         run: npx jest
