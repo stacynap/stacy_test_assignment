@@ -1,7 +1,6 @@
 import * as supertest from 'supertest';
+import config from '../config/base.config'
 const request = supertest('https://gorest.co.in/');
-const token = '5d7768e53f59b7c9573ef21657a31920b306738863f5d28b95cfc91e46f0f6c1';
-
 
 describe('Tests', () => {
   let userId;
@@ -9,7 +8,7 @@ describe('Tests', () => {
     it('GET List of all users', async () => {
       const res = await request
         .get('/public/v2/users')
-        .set("Authorization", "Bearer " + token)
+        .set("Authorization", "Bearer " + config.token)
       expect(res.statusCode).toBe(200)
     })
   });
@@ -26,7 +25,7 @@ describe('Tests', () => {
       const res = await request
         .post('/public/v2/users')
         .send(data)
-        .set("Authorization", "Bearer " + token)
+        .set("Authorization", "Bearer " + config.token)
       expect(res.body.name).toBe(data.name);
       expect(res.statusCode).toBe(201)
 
@@ -35,7 +34,7 @@ describe('Tests', () => {
     it('GET Single user details', async () => {
       const res = await request
         .get('/public/v2/users/' + userId._id)
-        .set("Authorization", "Bearer " + token)
+        .set("Authorization", "Bearer " + config.token)
       expect(res.body.id).toBe(userId.id)
     });
   });
@@ -56,7 +55,7 @@ describe('Tests', () => {
       const res = await request
         .put('/public/v2/users/' + userId)
         .send(data)
-        .set("Authorization", "Bearer " + token)
+        .set("Authorization", "Bearer " + config.token)
       console.log(res.body);
       expect(res.body.name).not.toBe(beforeName); // null
       expect(res.body.name).toBe(data.name);
@@ -70,7 +69,7 @@ describe('Create & Delete user request', () => {
   it('DELETE User', async () => {
     const res = await request
       .delete('/public/v2/users/' + userId)
-      .set("Authorization", "Bearer " + token)
+      .set("Authorization", "Bearer " + config.token)
     console.log(res.body);
     expect(res.statusCode).toBe(204)
     expect(res.body).toEqual({})
