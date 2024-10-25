@@ -26,7 +26,7 @@ jobs:
       - name: Install NPM
         run: npm install
       - name: Install Jest & Supertest
-        run: npm install jest supertest 
+        run: npm install jest supertest --save-dev 
       
       # Step 4: Run tests 
       - name: Run tests
