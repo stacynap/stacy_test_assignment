@@ -20,13 +20,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22'
+          node-version: '20'
       
       # Step 3: Install dependencies
       - name: Install NPM
         run: npm install
       - name: Install Jest & Supertest
-        run: npm install jest supertest --save-dev 
+        run: npm install jest@29.4.0 supertest@2.0.0 --save-dev 
       
       # Step 4: Run tests 
       - name: Run tests
