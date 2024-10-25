@@ -65,7 +65,7 @@ describe('Tests', () => {
     });
   });
 
-describe('Create & Delete user request', () => {
+describe('Delete user request', () => {
   it('DELETE User', async () => {
     const res = await request
       .delete('/public/v2/users/' + userId)

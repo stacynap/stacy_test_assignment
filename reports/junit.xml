@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="5" failures="0" errors="0" time="5.211">
+  <testsuite name="Tests" errors="0" failures="0" skipped="0" timestamp="2024-10-25T12:29:08" time="5.106" tests="5">
+    <testcase classname="Tests Read all users request GET List of all users" name="Tests Read all users request GET List of all users" time="0.425">
+    </testcase>
+    <testcase classname="Tests Create &amp; Read user requests POST Create a user" name="Tests Create &amp; Read user requests POST Create a user" time="0.651">
+    </testcase>
+    <testcase classname="Tests Create &amp; Read user requests GET Single user details" name="Tests Create &amp; Read user requests GET Single user details" time="0.905">
+    </testcase>
+    <testcase classname="Tests Update user request PUT Update user" name="Tests Update user request PUT Update user" time="1.027">
+    </testcase>
+    <testcase classname="Tests Delete user request DELETE User" name="Tests Delete user request DELETE User" time="0.539">
+    </testcase>
+  </testsuite>
+</testsuites>
