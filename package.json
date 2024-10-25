@@ -1,0 +1,23 @@
+{
+  "name": "stacys-npm-pkg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.4.0",
+    "jest-html-reporters": "^3.1.4",
+    "jest-junit": "^16.0.0",
+    "supertest": "^2.0.0",
+    "ts-jest": "^29.0.5"
+  },
+  "dependencies": {
+    "@types/jest": "^29.4.0",
+    "@types/supertest": "^2.0.12"
+  }
+}
