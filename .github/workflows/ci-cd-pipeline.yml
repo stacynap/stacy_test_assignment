@@ -25,6 +25,8 @@ jobs:
       # Step 3: Install dependencies
       - name: Install NPM
         run: npm install
+      - name: Install mime
+        run: npm install mime
       - name: Install Jest & Supertest
         run: npm install jest@29.4.0 supertest@2.0.0 --save-dev 
       
