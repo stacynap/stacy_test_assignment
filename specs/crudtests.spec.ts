@@ -19,7 +19,7 @@ describe('Tests', () => {
       const data = {
         name: 'Stacy Test',
         gender: 'female',
-        email: Math.floor(Math.random() * 100000) + '@test.stacy',
+        email: Math.floor(Math.random() * 100) + '@test.stacy',
         status: 'active'
       }
 
@@ -43,25 +43,25 @@ describe('Tests', () => {
   describe('Update user request', () => {
     it('PUT Update user', async () => {
       const data = {
-        name: 'Stacy Test Edited',
+        name: userId.name + ' Edited',
         gender: 'male',
-        email: Math.floor(Math.random() * 100000) + '@test.stacy',
+        email: Math.floor(Math.random() * 100) + '@test.stacy',
         status: 'active'
       }
 
-      //const getRes = await request.get('/public/v2/users/' + userId._id);
-      //const beforeName = userId.body.name;
-      //const beforeGender = userId.body.gender;
+      const getRes = await request.get('/public/v2/users/' + userId);
+      const beforeName = getRes.body.name;
+      const beforeGender = getRes.body.gender;
 
       const res = await request
         .put('/public/v2/users/' + userId)
         .send(data)
         .set("Authorization", "Bearer " + token)
       console.log(res.body);
-      //expect(res.body.name).not.toBe(beforeName); // null
-      //expect(userId.body.name).toBe(data.name);
-      //expect(res.body.gender).not.toBe(beforeGender); // null
-      //expect(userId.body.gender).toBe(data.gender);
+      expect(res.body.name).not.toBe(beforeName); // null
+      expect(res.body.name).toBe(data.name);
+      expect(res.body.gender).not.toBe(beforeGender); // null
+      expect(res.body.gender).toBe(data.gender);
       expect(res.statusCode).toBe(200)
     });
   });
