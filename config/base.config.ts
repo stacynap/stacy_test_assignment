@@ -1,4 +1,4 @@
 export default {
-    token:"5d7768e53f59b7c9573ef21657a31920b306738863f5d28b95cfc91e46f0f6c1",
+    token:"6b4df2a05faabeb83b582ebee5665930c07bc4d3ae45b82090e88653b025bb07",
     url: "https://gorest.co.in/"
   }
