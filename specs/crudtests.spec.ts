@@ -1,7 +1,5 @@
-//import * as supertest from 'supertest';
-import config from '../config/base.config'
-const request = require('supertest');
-//const request = supertest('https://gorest.co.in/');
+const config = require('../config/base.config')
+const request = require('supertest')
 
 describe('Tests', () => {
   let userId;
