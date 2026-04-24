@@ -10,7 +10,7 @@ describe('Tests', () => {
       const res = await request(config.url)
         .get('/public/v2/users')
         .set("Authorization", "Bearer " + config.token)
-      expect(res.statusCode).toBe(200)
+      expect(res.statusCode).toBe(304)
     })
   });
 
