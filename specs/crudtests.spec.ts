@@ -1,5 +1,5 @@
-const config = require('../config/base.config')
-const request = require('supertest')
+import config from '../config/base.config.js'
+import request from 'supertest'
 
 describe('Tests', () => {
   let userId;
